@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('interface');
+    $btcValue = file_get_contents("https://blockchain.info/tobtc?currency=USD&value=1");;
+    return view('interface', ["btcValue"=>$btcValue]);
 });

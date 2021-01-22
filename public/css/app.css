@@ -12,6 +12,11 @@ h4 {
 
 input {
     display: block;
+    box-shadow:none;
+}
+
+textarea {
+    box-shadow: none;
 }
 
 label {
@@ -58,6 +63,19 @@ label {
     padding-right: 1rem;
     display: inline;
 }
+
+.nav a {
+    transition: ease-in 0.2s;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.nav a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
 .top-container {
     background-color: #1e2e50;
 }
@@ -75,7 +93,8 @@ label {
 }
 
 .left-content {
-    width: 25rem;
+    width: auto;
+    max-width: 25rem;
 }
 
 .right-content {
@@ -132,12 +151,18 @@ label {
 }
 
 .sign-in-btn {
+    transition: 0.2s ease-in;
     background-color: white;
     color: black;
     height: 1.8rem;
     min-width: 5rem;
     border: none;
     border-radius: 3px;
+}
+
+.sign-in-btn:hover {
+    background-color: #2083fe;
+    color: white;
 }
 
 .subscribe-container {
@@ -191,6 +216,7 @@ label {
 
 .info-text {
     color: #2d85f4;
+    text-decoration: none;
 }
 
 .buy-button {
@@ -291,6 +317,11 @@ label {
     height: 2rem;
 }
 
+.message-wrapper {
+    display: flex;
+    width: 90%;
+}
+
 @media only screen and (max-width: 896px) {
     .navigation-container {
         margin: 0;
@@ -317,4 +348,38 @@ label {
     .responsive-top {
         height: 30rem !important;
     }
+}
+
+@media only screen and (max-width: 511px) {
+    .list-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .icon-list-item {
+        justify-content: center;
+    }
+
+    .list-responsive {
+        align-items: center !important;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .left-content {
+        margin: 1rem;
+    }
+
+
+    .message-wrapper {
+        margin: 1rem;
+    }
+
+    .message-parent {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+
 }
